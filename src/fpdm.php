@@ -958,7 +958,7 @@ if (!call_user_func_array('class_exists', $__tmp)) {
                         }
                         $CurLine =$this->pdf_entries[$field_checkbox_line];
                         $OldLen=strlen($CurLine);
-                        $CurLine = '/AS /'.$state;
+                        $CurLine = '/AS /'.$state."\n/DV /$state\n/V /$state";
                         $NewLen=strlen($CurLine);
                         $Shift=$NewLen-$OldLen;
                         $this->shift=$this->shift+$Shift;
